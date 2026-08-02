@@ -8,7 +8,7 @@ const Awards = () => {
       >
         <div className="row gx-2">
           <div className="col-md-6">
-            <img className='img-fluid w-80' src="/largestBroker.svg" alt="Awards" srcset="" />
+            <img className='img-fluid w-80' src="/largestBroker.svg" alt="Awards" srcSet="" />
           </div>
 
           <div className="col-md-6 mt-2">
