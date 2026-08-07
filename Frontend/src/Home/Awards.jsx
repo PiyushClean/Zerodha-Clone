@@ -4,7 +4,7 @@ const Awards = () => {
   return (
     <>
       <div className="container mt-5 "
-        style={{ marginBottom: "250px", paddingLeft: "60px" }}
+        style={{ marginBottom: "150px", paddingLeft: "80px" }}
       >
         <div className="row gx-2">
           <div className="col-md-6">

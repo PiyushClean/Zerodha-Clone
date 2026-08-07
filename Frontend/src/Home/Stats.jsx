@@ -7,7 +7,7 @@ const Stats = () => {
         <div className="row align-items-center">
 
           {/* texts */}
-          <div className="col-5 " style={{ paddingLeft: "25px" }}>
+          <div className="col-5 " style={{ paddingLeft: "25px", transform: "translateX(50px)" }}>
             <h1 className='fs-2 mb-5'>Trust with confidence</h1>
             <h2 className='fs-4'>Customer-first always</h2>
             <p className='text-muted'>That's why 1.5+ crore customers trust Zerodha with ₹4.5+ lakh crores worth of equity investments.</p>
