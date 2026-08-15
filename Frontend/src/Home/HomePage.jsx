@@ -12,14 +12,14 @@ import Footer from '../Footer';
 const index = () => {
   return (
     <>
-      <Navbar />
+
       <Hero />
       <Awards />
       <Stats />
       <Pricing />
       <Education />
       <OpenAccount />
-      <Footer />
+
     </>
   )
 }
