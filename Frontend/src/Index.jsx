@@ -7,6 +7,7 @@ import PricingPage from "./Pricing/PricingPage"
 import SupportPage from "./Support/SupportPage"
 import Navbar from "./Home/Navbar";
 import Footer from "./Footer";
+import NotFound from "./NotFound"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const Index = () => {
@@ -22,6 +23,7 @@ const Index = () => {
           <Route path="/Products" element={<ProductsPage />} />
           <Route path="/Pricing" element={<PricingPage />} />
           <Route path="/Support" element={<SupportPage />} />
+          <Route path='*' element={<NotFound />} />
         </Routes>
 
         <Footer />
