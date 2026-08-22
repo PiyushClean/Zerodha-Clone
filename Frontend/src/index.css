@@ -117,6 +117,13 @@ code {
 
 .FooterParagraph {
   font-size: 14px;
- color: rgba(72, 72, 72, 1);
+  color: rgba(72, 72, 72, 1);
   margin-bottom: 1rem;
+}
+
+.team-img {
+  border-radius: 50%;
+  width: 60%;
+  margin: 0 auto;
+  display: block;
 }

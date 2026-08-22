@@ -11,7 +11,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg border-bottom py-3" style={{ paddingLeft: "8%", paddingRight: "10%" }} >
 
 
-      <NavLink to="/"><img src="/logo.svg" alt="" style={{ width: "30%" }} /></NavLink>
+      <NavLink to="/"><img src="/logo.svg" alt="" style={{ width: "25%" }} /></NavLink>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -20,13 +20,13 @@ const Navbar = () => {
         <ul class="navbar-nav ms-auto gap-5 align-items-center">
 
           <li class="nav-item">
-            <NavLink className={dark_li} to="/signup">Register</NavLink>
+            <NavLink className={dark_li} to="/signup">Signup</NavLink>
           </li>
           <li class="nav-item">
             <NavLink className={dark_li} to="/about">About</NavLink>
           </li>
           <li class="nav-item">
-            <NavLink className={dark_li} to="/product">Product</NavLink>
+            <NavLink className={dark_li} to="/products">Product</NavLink>
           </li>
 
           <li class="nav-item">
