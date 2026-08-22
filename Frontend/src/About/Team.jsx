@@ -3,11 +3,11 @@ import React from 'react'
 const Team = () => {
   return (
     <>
-      <div className="container mt-5">
-        <div className="row mb-5 mt-5">
+      <div className="container" style={{ marginTop: "100px" }}>
+        <div className="row mb-5">
           <div className="col-1"></div>
           <div className="col-5 text-center">
-            <img
+            <img className='mt-3'
               style={{
                 borderRadius: "100%",
                 width: "60%",

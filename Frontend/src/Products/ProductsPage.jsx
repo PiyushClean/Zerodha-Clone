@@ -51,6 +51,8 @@ const ProductsPage = () => {
                 googlePlay=""
                 appStore=""
             />
+            <p className="mt-5 mb-5 text-center">Want to know more about our technology stack? Check out the Zerodha.tech blog.</p>
+
             <Universe />
         </>
     )
