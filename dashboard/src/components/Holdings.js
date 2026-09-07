@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import axios, { all } from "axios";
+import axios from "axios";
 import { VerticalGraph } from "./VerticalGraph";
 
 // import { holdings } from "../data/data";
@@ -8,8 +8,8 @@ const Holdings = () => {
   const [allHoldings, setAllHoldings] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3002/allHoldings").then((res) => {
-      // console.log(res.data);
+    axios.get("http://localhost:3000/getHoldings").then((res) => {
+
       setAllHoldings(res.data);
     });
   }, []);
@@ -68,6 +68,7 @@ const Holdings = () => {
             const dayClass = stock.isLoss ? "loss" : "profit";
 
             return (
+
               <tr key={index}>
                 <td>{stock.name}</td>
                 <td>{stock.qty}</td>
@@ -80,6 +81,7 @@ const Holdings = () => {
                 <td className={profClass}>{stock.net}</td>
                 <td className={dayClass}>{stock.day}</td>
               </tr>
+
             );
           })}
         </table>
