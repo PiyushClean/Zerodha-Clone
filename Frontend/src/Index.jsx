@@ -1,6 +1,7 @@
 import React from 'react'
-import HomePage from "./Home/HomePage";
+import HomePage from "./Home/HomePage"
 import Signup from "./Signup/Signup"
+import Login from "./Signup/Login"
 import AboutPage from "./About/AboutPage"
 import ProductsPage from "./Products/ProductsPage"
 import PricingPage from "./Pricing/PricingPage"
@@ -19,6 +20,7 @@ const Index = () => {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/Signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/About" element={<AboutPage />} />
           <Route path="/Products" element={<ProductsPage />} />
           <Route path="/Pricing" element={<PricingPage />} />

@@ -6,20 +6,29 @@ require("dotenv").config();
 
 const express = require("express");
 const app = express();
+
 const authRoute = require("./Routes/AuthRoute");
 const mongoose = require("mongoose");
-
-const PORT = process.env.PORT || 3000;
-const url = process.env.MONGO_URL;
 
 const { HoldingsModel } = require("./model/HoldingsModel");
 const { PositionsModel } = require("./model/PositionsModel");
 
 const bodyParser = require('body-parser');
-const cors = require('cors');
+const cors = require("cors");
 var cookieParser = require('cookie-parser');
 
 app.use(express.json());
+
+app.use(
+    cors({
+        origin: ["http://localhost:5173", "http://localhost:3001"],
+        methods: ["GET", "POST", "PUT", "DELETE"],
+        credentials: true,
+    })
+);
+
+const PORT = process.env.PORT || 3000;
+const url = process.env.MONGO_URL;
 
 // app.get("/getHoldings", async function (req, res) {
 //     let tempHoldings = [
@@ -218,13 +227,6 @@ app.listen(PORT, () => {
 });
 
 
-app.use(
-    cors({
-        origin: ["http://localhost:3000"],
-        methods: ["GET", "POST", "PUT", "DELETE"],
-        credentials: true,
-    })
-);
 app.use(cookieParser());
 
 app.use(express.json());
