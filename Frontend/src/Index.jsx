@@ -1,4 +1,6 @@
-import React from 'react'
+import React ,  { useState , useEffect } from 'react'
+import axios from 'axios'
+
 import HomePage from "./Home/HomePage"
 import Signup from "./Signup/Signup"
 import Login from "./Signup/Login"
@@ -12,6 +14,31 @@ import NotFound from "./NotFound"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const Index = () => {
+
+  const [checkingAuth, setCheckingAuth] = useState(true);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:3000/check-auth", {
+        withCredentials: true,
+      })
+      .then((response) => {
+        if (response.data.authenticated) {
+          window.location.href = "http://localhost:3001/";
+        } else {
+          setCheckingAuth(false);
+        }
+      })
+      .catch(() => {
+        setCheckingAuth(false);
+      });
+  }, []);
+
+  if (checkingAuth) {
+    return <div>Loading...</div>
+  }
+
+
   return (
     <>
       <BrowserRouter>
