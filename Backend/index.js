@@ -16,6 +16,7 @@ const { PositionsModel } = require("./model/PositionsModel");
 const bodyParser = require('body-parser');
 const cors = require("cors");
 var cookieParser = require('cookie-parser');
+const { default: axios } = require("axios");
 
 app.use(express.json());
 

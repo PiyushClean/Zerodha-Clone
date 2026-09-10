@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 
 import axios from "axios";
 
@@ -19,6 +19,9 @@ import { DoughnutChart } from "./DoughnoutChart";
 const labels = watchlist.map((subArray) => subArray["name"]);
 
 const WatchList = () => {
+
+  const labels = watchlist.map((stock) => stock.name);
+
   const data = {
     labels,
     datasets: [
