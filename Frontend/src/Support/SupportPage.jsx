@@ -5,7 +5,7 @@ import CreateTicket from './CreateTicket'
 const SupportPage = () => {
     return (
         <>
-            <div>SupportPage </div>
+            
             <Hero />
             <CreateTicket />
         </>

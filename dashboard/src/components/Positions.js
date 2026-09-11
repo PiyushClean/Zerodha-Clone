@@ -10,7 +10,7 @@ const Positions = () => {
   const [Positions, setPositions] = useState([])
 
   useEffect(() => {
-    axios.get("http://localhost:3000/getPositions").then((res) => {
+    axios.get(`${process.env.REACT_APP_API_URL}/getPositions`).then((res) => {
       setPositions(res.data);
     });
     return () => {

@@ -13,10 +13,9 @@ const mongoose = require("mongoose");
 const { HoldingsModel } = require("./model/HoldingsModel");
 const { PositionsModel } = require("./model/PositionsModel");
 
-const bodyParser = require('body-parser');
 const cors = require("cors");
 var cookieParser = require('cookie-parser');
-const { default: axios } = require("axios");
+const axios = require("axios");
 
 app.use(express.json());
 
@@ -219,13 +218,14 @@ app.get("/getPositions", async (req, res) => {
 
 
 mongoose
-    .connect(url)
-    .then(() => console.log("MongoDB is  connected successfully"))
-    .catch((err) => console.error(err));
-
-app.listen(PORT, () => {
-    console.log(`Server is listening on port ${PORT}`);
-});
+    .connect(url).then(() => {
+        console.log("MongoDB is connected successfully");
+        app.listen(PORT, () => {
+            console.log(`Server is listening on port ${PORT}`);
+        });
+    }).catch((err) => {
+        console.error("MongoDB connection failed:", err);
+    });
 
 
 app.use(cookieParser());
