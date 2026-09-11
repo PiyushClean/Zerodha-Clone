@@ -198,6 +198,10 @@ const url = process.env.MONGO_URL;
 //     res.send(" Postions saved to database ");
 // });
 
+app.get("/", (req, res) => {
+    res.send("Zerodha Backend is running!");
+});
+
 app.get("/getHoldings", async (req, res) => {
     let allHoldings = await HoldingsModel.find({});
     //console.log(allHoldings);
