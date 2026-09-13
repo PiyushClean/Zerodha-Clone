@@ -73,6 +73,17 @@ A full-stack stock trading platform clone inspired by the core UI and workflow o
 - Render
 - MongoDB Atlas
 
+ ## 📚 Authentication Learning Resource
+The authentication system was implemented as part of the learning process using authentication concepts from freeCodeCamp, including:
+
+- JWT authentication
+- Password hashing with bcrypt
+- Authentication cookies
+- Protected routes
+- User verification
+
+Learning resource: [freeCodeCamp](https://www.freecodecamp.org/learn/)
+
 ## 📁 Project Structure
 
 ```text
