@@ -22,6 +22,7 @@ const allowedOrigins = [
     "http://localhost:5173",
     "http://localhost:3001",
     "https://zerodha-clone-frontend-kappa.vercel.app",
+    "https://dashboard-zerodha-clone.vercel.app",
 ];
 
 app.use(
