@@ -18,9 +18,15 @@ var cookieParser = require('cookie-parser');
 const axios = require("axios");
 
 app.use(express.json());
+const allowedOrigins = [
+    "http://localhost:5173",
+    "http://localhost:3001",
+    "https://zerodha-clone-frontend-kappa.vercel.app",
+];
+
 app.use(
     cors({
-        origin: "https://zerodha-clone-frontend-kappa.vercel.app",
+        origin: allowedOrigins,
         credentials: true,
     })
 );

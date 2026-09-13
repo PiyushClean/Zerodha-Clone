@@ -31,7 +31,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "https://zerodha-clone-2n8x.onrender.com/login",
+        `${import.meta.env.VITE_API_URL}/login`,
         {
           ...inputValue,
         },

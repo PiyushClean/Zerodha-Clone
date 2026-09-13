@@ -2,10 +2,10 @@ const User = require("../../model/UserModel");
 require("dotenv").config();
 const jwt = require("jsonwebtoken");
 
-module.exports.userVerification = (req, res , next) => {
+module.exports.userVerification = (req, res, next) => {
     const token = req.cookies.token
     if (!token) {
-        return res.json({ status: false })
+         return res.status(401).json({ authenticated: false });
     }
     jwt.verify(token, process.env.TOKEN_KEY, async (err, data) => {
         if (err) {
