@@ -33,9 +33,8 @@ function SecureDashboard() {
   }
 
   if (!authenticated) {
-    // window.location.href = "https://zerodha-clone-frontend-kappa.vercel.app/";
-    // return null;
-    return <div>Not authenticated</div>;
+    window.location.href = "https://zerodha-clone-frontend-kappa.vercel.app/";
+    return null;
   }
 
   return <Home />;
