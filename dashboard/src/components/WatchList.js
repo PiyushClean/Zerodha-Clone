@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 
 import GeneralContext from "./GeneralContext";
 
@@ -14,7 +14,7 @@ import {
 import { watchlist } from "../data/data";
 import { DoughnutChart } from "./DoughnoutChart";
 
-const labels = watchlist.map((subArray) => subArray["name"]);
+// const labels = watchlist.map((subArray) => subArray["name"]);
 
 const WatchList = () => {
 

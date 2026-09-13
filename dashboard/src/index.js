@@ -8,26 +8,33 @@ import axios from "axios";
 
 function SecureDashboard() {
   const [loading, setLoading] = useState(true);
+  const [authenticated, setAuthenticated] = useState(false);
 
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_API_URL}/check-auth`, {
+      .get(`${process.env.REACT_APP_API_URL}/check-auth`, {
         withCredentials: true,
       })
       .then((res) => {
-        if (!res.data.authenticated) {
-          window.location.href = "http://localhost:5173";
-        } else {
-          setLoading(false);
+        console.log("Auth Response:", res.data);
+        if (res.data.authenticated) {
+          setAuthenticated(true);
         }
+        setLoading(false);
       })
-      .catch(() => {
-        window.location.href = "http://localhost:5173";
+      .catch((err) => {
+        console.log("Auth Error:", err);
+        setLoading(false);
       });
   }, []);
 
   if (loading) {
     return <div>Checking Authentication ...</div>;
+  }
+
+  if (!authenticated) {
+    window.location.href = "https://zerodha-clone-frontend-kappa.vercel.app/";
+    return null;
   }
 
   return <Home />;
